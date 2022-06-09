@@ -58,3 +58,24 @@ densityplot(x.avg,main="sample size 9")
 Sample9mean<-mean(x.avg)
 Sample9sd<-sd(x.avg)
 ```
+
+
+```{r}
+numb = 16
+Hdata   <- sample(Homers_data$kkardashtemp ,size = numb*1000, replace=T)
+mdata  <-matrix(Hdata,nrow=1000,ncol=numb)
+x.avg <- apply(mdata,1,mean)
+densityplot(x.avg,main="sample size 16")
+Sample16mean<-mean(x.avg)
+Sample16sd<-sd(x.avg)
+```
+
+```{r}
+numb = 25
+Hdata   <- sample(Homers_data$kkardashtemp ,size = numb*1000, replace=T)
+mdata  <-matrix(Hdata,nrow=1000,ncol=numb)
+x.avg <- apply(mdata,1,mean)
+densityplot(x.avg,main="sample size 25")
+Sample25mean<-mean(x.avg)
+Sample25sd<-sd(x.avg)
+```
